@@ -1,5 +1,5 @@
 {% set name = "fcmaes" %}
-{% set version = "1.2.19" %}
+{% set version = "1.2.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66d4b69ce45186e05c15af7f3cf702d45bc4338ac3c6f3ae80ba31b123163637
+  sha256: b6da00809bedd7fc0c0dce67eef1369550595f8085216f2ca85e1b04d7bbe321
 
 build:
   number: 0
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A Python 3 gradient-free optimization library."
+  summary: A Python 3 gradient-free optimization library.
   dev_url: https://github.com/dietmarwo/fast-cma-es
 
 extra:
