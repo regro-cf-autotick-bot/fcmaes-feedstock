@@ -1,5 +1,5 @@
 {% set name = "fcmaes" %}
-{% set version = "1.2.21" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6da00809bedd7fc0c0dce67eef1369550595f8085216f2ca85e1b04d7bbe321
+  sha256: 30f5663709d6f56807bd885d2c92e5c6e038ce1f6b76438c0f0533894898d424
 
 build:
   number: 0
