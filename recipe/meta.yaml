@@ -1,33 +1,37 @@
 {% set name = "fcmaes" %}
-{% set version = "1.3.9" %}
+{% set version = "1.3.11" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c163326687197a0540c6240174f7eb58ee9ab533ac331f75db9d82a036619a9c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fcmaes-{{ version }}.tar.gz
+  sha256: 4a085f7af26e43d930585cd7d9467e6ac4e209fc9d91965b41fb99da1e402db9
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - numpy
-    - python
+    - python >=3.6
     - scipy
 
 test:
   imports:
     - fcmaes
-
+  commands:
+    - pip check
+  requires:
+    - pip
+  
 about:
   home: https://github.com/dietmarwo/fast-cma-es
   license: MIT
@@ -38,5 +42,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - oblute
     - mxr-conda
