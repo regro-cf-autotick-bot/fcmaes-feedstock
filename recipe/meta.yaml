@@ -1,5 +1,5 @@
 {% set name = "fcmaes" %}
-{% set version = "1.3.11" %}
+{% set version = "1.3.14" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fcmaes-{{ version }}.tar.gz
-  sha256: 4a085f7af26e43d930585cd7d9467e6ac4e209fc9d91965b41fb99da1e402db9
+  sha256: 1b6f571253cd607a81bada6aa6018893c22d0d1d83abfc8922e725610df89c3c
 
 build:
   number: 0
@@ -31,7 +31,7 @@ test:
     - pip check
   requires:
     - pip
-  
+
 about:
   home: https://github.com/dietmarwo/fast-cma-es
   license: MIT
